@@ -20,5 +20,5 @@ _prompt_vcs_branch() {
 add-zsh-hook precmd _prompt_shorten_cwd
 add-zsh-hook precmd _prompt_vcs_branch
 
-PROMPT='%(?.%F{green}%Bπ%f%b %F{blue}%1v%f %F{magenta}❯%f .%F{red}%B%?%f%b %F{blue}%1v%f %F{magenta}❯%f )'
+PROMPT='%(?.%F{blue}%1v%f %F{magenta}❯%f .%F{red}%B%?%f%b %F{blue}%1v%f %F{magenta}❯%f )'
 RPROMPT='%F{magenta}%2v%f'
