@@ -15,10 +15,33 @@ config.scrollback_lines = 3000
 config.default_workspace = 'home'
 -- Font
 config.font = wezterm.font('Hack Nerd Font Mono')
-config.font_size = 15
-config.line_height = 1.05
+config.font_size = 12
+config.line_height = 1
 -- Keys
--- config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+-- Leader is the same as my old tmux prefix
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.keys = {
+  -- splitting
+  {
+    mods   = "LEADER",
+    key    = "-",
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
+  },
+  {
+    mods   = "LEADER|SHIFT",
+    key    = "=",
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
+  }
+}
+-- Tab
+config.enable_tab_bar = true
+config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
+config.show_new_tab_button_in_tab_bar = false
+config.show_tab_index_in_tab_bar = false
+config.tab_bar_at_bottom = true
+
+
 
 return config
 
