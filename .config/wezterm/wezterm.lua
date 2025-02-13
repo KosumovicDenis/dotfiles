@@ -6,13 +6,18 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- Settings
+config.enable_wayland = false
 -- Color & Window conf
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'Kanagawa Dragon (Gogh)'
 config.window_background_opacity = 0.9
 config.window_decorations = 'RESIZE'
 config.window_close_confirmation = 'AlwaysPrompt'
 config.scrollback_lines = 3000
 config.default_workspace = 'home'
+-- Padding
+config.window_padding = {
+  bottom = 0,
+}
 -- Font
 config.font = wezterm.font('Hack Nerd Font Mono')
 config.font_size = 13
@@ -41,7 +46,4 @@ config.show_new_tab_button_in_tab_bar = false
 config.show_tab_index_in_tab_bar = false
 config.tab_bar_at_bottom = true
 
-
-
 return config
-
