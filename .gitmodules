@@ -1,3 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/KosumovicDenis/init.lua
+[submodule ".config/wezterm"]
+	path = .config/wezterm
+	url = https://github.com/KosumovicDenis/wezterm
