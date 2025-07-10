@@ -3,10 +3,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
+
 # relocate program data to XDG user directories
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export GOPATH="$XDG_DATA_HOME/go"
+export GO_PATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+export GO_BIN="$HOME/go/bin"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -17,10 +19,13 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export WEZTERM_CONFIG_FILE="$XDG_CONFIG_HOME/wezterm/wezterm.lua"
 
+export MASON="$XDG_DATA_HOME/nvim/mason"
+
 # add user-installed executables and flatpak applications to PATH
 path+=(
     "$CARGO_HOME/bin"
-    "$GOPATH/bin"
+    "$GO_BIN"
+    "$GO_PATH/bin"
     "$XDG_DATA_HOME/npm/bin"
     "$XDG_DATA_HOME/flatpak/exports/bin"
     "/var/lib/flatpak/exports/bin"
