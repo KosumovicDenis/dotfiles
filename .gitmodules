@@ -4,3 +4,6 @@
 [submodule ".config/wezterm"]
 	path = .config/wezterm
 	url = https://github.com/KosumovicDenis/wezterm
+[submodule ".config/zsh"]
+	path = .config/zsh
+	url = https://github.com/KosumovicDenis/zsh/
